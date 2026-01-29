@@ -40,25 +40,22 @@ function searchByName(keyword) {
 }
 
 function sortByName(ascending) {
-    const sorted = [...allProducts].sort(function(a, b) {
-        if (ascending) {
-            return a.title.localeCompare(b.title);
-        } else {
-            return b.title.localeCompare(a.title);
-        }
+    allProducts.sort(function(a, b) {
+        return ascending
+            ? a.title.localeCompare(b.title)
+            : b.title.localeCompare(a.title);
     });
-    renderProducts(sorted);
+    renderProducts(allProducts);
 }
 
 function sortByPrice(ascending) {
-    const sorted = [...allProducts].sort(function(a, b) {
-        if (ascending) {
-            return a.price - b.price;
-        } else {
-            return b.price - a.price;
-        }
+    allProducts.sort(function(a, b) {
+        return ascending
+            ? a.price - b.price
+            : b.price - a.price;
     });
-    renderProducts(sorted);
+    renderProducts(allProducts);
+
 }
 
 getProducts();
