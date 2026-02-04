@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Posts & Comments</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body {
+    background: #f3f4f6;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+/* Header */
+.page-header {
+    background: white;
+    border-radius: 10px;
+    padding: 20px 25px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.page-header h1 {
+    font-size: 26px;
+    margin: 0;
+}
+
+/* Table */
+.table {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table thead {
+    background: #f9fafb;
+}
+
+.table td, .table th {
+    vertical-align: middle;
+}
+
+/* Post info box */
+.post-box {
+    background: #f9fafb;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.views {
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+/* Buttons */
+.btn {
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+.comment-item {
+    margin-bottom: 6px;
+}
+
+.comment-item button {
+    margin-left: 6px;
+}
+
+.comment-input {
+    margin-top: 10px;
+}
+
+</style>
+</head>
+
+<body>
+<div class="container">
+
+    <!-- Header -->
+    <div class="page-header">
+        <h1> Bài viết và bình luận</h1>
+       <button id="add-post" class="btn btn-success">Thêm post</button>
+
+    </div>
+
+    <!-- Table -->
+    <div class="table-responsive">
+        <table class="table table-bordered align-middle">
+            <thead>
+                <tr>
+                    <th width="60">ID</th>
+                    <th width="250">Tiêu đề</th>
+                    <th>Lượt xem & Bình luận</th>
+                </tr>
+            </thead>
+
+            <tbody id="products-container">
+                <tr>
+                    <td colspan="3" class="text-center text-muted">
+                        Loading posts...
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
